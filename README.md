@@ -194,7 +194,7 @@ This project is licensed under the **Apache License 2.0** – see [`LICENSE.md`]
 ---
 
 ## **📬 Contact**
-For questions or feedback, reach out to [Rayan Aliane](mailto:your-email@example.com).
+For questions or feedback, reach out to [Rayan Aliane](mailto:rayan.alianel@outlook.com).
 
 ---
 

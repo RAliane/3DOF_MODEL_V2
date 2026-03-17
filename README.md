@@ -67,8 +67,8 @@ A **modernized 3DOF flight dynamics and control system** built with **PyTorch, O
 ### **Installation**
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/RAliane/3DOF_MODEL.git
-   cd 3DOF_MODEL
+   git clone https://github.com/RAliane/3DOF_MODEL_V2.git
+   cd 3DOF_MODEL_V2
    ```
 
 2. **Install dependencies**:

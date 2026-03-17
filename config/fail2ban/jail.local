@@ -1,0 +1,9 @@
+[nginx-ratelimit]
+enabled = true
+port = http,https
+filter = nginx-ratelimit
+logpath = /var/log/nginx/access.log
+maxretry = 5
+findtime = 60
+bantime = 1h
+action = iptables-multiport[name=nginx, port="http,https"]

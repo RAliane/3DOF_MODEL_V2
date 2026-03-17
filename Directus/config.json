@@ -1,0 +1,109 @@
+{
+  "collections": {
+    "flight_logs": {
+      "schema": {
+        "name": "flight_logs",
+        "note": "Logs for flight dynamics and control outputs."
+      },
+      "fields": [
+        {
+          "field": "id",
+          "type": "integer",
+          "schema": {
+            "is_primary_key": true,
+            "has_auto_increment": true
+          },
+          "meta": {
+            "hidden": true,
+            "interface": "input"
+          }
+        },
+        {
+          "field": "timestamp",
+          "type": "timestamp",
+          "schema": {
+            "is_nullable": false
+          },
+          "meta": {
+            "interface": "datetime",
+            "options": {
+              "format": "second"
+            }
+          }
+        },
+        {
+          "field": "altitude",
+          "type": "float",
+          "schema": {
+            "is_nullable": false
+          },
+          "meta": {
+            "interface": "input"
+          }
+        },
+        {
+          "field": "airspeed",
+          "type": "float",
+          "schema": {
+            "is_nullable": false
+          },
+          "meta": {
+            "interface": "input"
+          }
+        },
+        {
+          "field": "throttle",
+          "type": "float",
+          "schema": {
+            "is_nullable": false
+          },
+          "meta": {
+            "interface": "input"
+          }
+        },
+        {
+          "field": "elevator",
+          "type": "float",
+          "schema": {
+            "is_nullable": false
+          },
+          "meta": {
+            "interface": "input"
+          }
+        },
+        {
+          "field": "aileron",
+          "type": "float",
+          "schema": {
+            "is_nullable": false
+          },
+          "meta": {
+            "interface": "input"
+          }
+        },
+        {
+          "field": "rudder",
+          "type": "float",
+          "schema": {
+            "is_nullable": false
+          },
+          "meta": {
+            "interface": "input"
+          }
+        }
+      ]
+    }
+  },
+  "relations": [],
+  "roles": [
+    {
+      "id": "admin",
+      "name": "Admin",
+      "description": "Full access to everything.",
+      "ip_access": null,
+      "enforce_tfa": false,
+      "admin_access": true,
+      "app_access": true
+    }
+  ]
+}

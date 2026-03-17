@@ -1,0 +1,62 @@
+version: 1
+directus: 10.0.0
+vendor: sqlite3
+collections:
+  - collection: flight_logs
+    meta:
+      note: Logs for flight dynamics and control outputs.
+    schema:
+      name: flight_logs
+    fields:
+      - field: id
+        type: integer
+        meta:
+          hidden: true
+          interface: input
+        schema:
+          is_primary_key: true
+          has_auto_increment: true
+      - field: timestamp
+        type: timestamp
+        meta:
+          interface: datetime
+          options:
+            format: second
+        schema:
+          is_nullable: false
+      - field: altitude
+        type: float
+        meta:
+          interface: input
+        schema:
+          is_nullable: false
+      - field: airspeed
+        type: float
+        meta:
+          interface: input
+        schema:
+          is_nullable: false
+      - field: throttle
+        type: float
+        meta:
+          interface: input
+        schema:
+          is_nullable: false
+      - field: elevator
+        type: float
+        meta:
+          interface: input
+        schema:
+          is_nullable: false
+      - field: aileron
+        type: float
+        meta:
+          interface: input
+        schema:
+          is_nullable: false
+      - field: rudder
+        type: float
+        meta:
+          interface: input
+        schema:
+          is_nullable: false

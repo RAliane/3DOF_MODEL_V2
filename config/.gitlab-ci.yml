@@ -1,0 +1,29 @@
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  PODMAN_IMAGE: "3dof-model:v2"
+  PODMAN_REGISTRY: "localhost:5000"
+
+test:
+  stage: test
+  script:
+    - uv pip install -e ".[test]"
+    - pytest tests/unit/
+    - pytest tests/integration/
+    - pytest tests/system/
+
+build:
+  stage: build
+  script:
+    - podman build -t $PODMAN_IMAGE -f config/Containerfile
+    - podman push $PODMAN_IMAGE $PODMAN_REGISTRY/$PODMAN_IMAGE
+
+deploy:
+  stage: deploy
+  script:
+    - podman-compose -f config/podman-compose.yml up -d
+  only:
+    - main

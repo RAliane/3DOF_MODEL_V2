@@ -6,9 +6,9 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "directus-sdk-py>=1.1.0",
-    "onnx>=1.20.1",
+    "onnx>=1.21.0",
     "polars>=1.39.0",
     "pydantic>=2.12.5",
-    "pytest>=9.0.2",
+    "pytest>=9.0.3",
     "torch>=2.10.0",
 ]
